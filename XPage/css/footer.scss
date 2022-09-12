@@ -1,0 +1,103 @@
+.footer
+{
+    background-color: $white;
+    margin-top: 3%;
+    padding-top: 3%;
+
+    .footer__body
+    {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin-left: 5%;
+      
+
+        .footer__body__subscribe
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            border-bottom: 3px solid $black;
+            padding-bottom: 5%;
+            margin-bottom: 4%;
+
+            .footer__body__subscribe__text
+            {
+                p
+                {
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: $fs24;
+                    line-height: 115%;
+                    color: $black;
+                }
+            }
+
+            .footer__body__subscribe__networks
+            {
+                display: flex;
+                justify-content:flex-start;
+                align-items: center;
+
+                .networks__item
+                {
+                    margin-left: 2%;
+
+                    &#first
+                    {
+                        margin: 0;
+                    }
+
+                    .networks__icon
+                    {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+        }
+
+        .footer__body__privacy
+        {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3%;
+            .privacy__text
+            {
+                display: flex;
+                flex-direction: column;
+
+                p
+                {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: $fs14;
+                    line-height: 170%;
+                    color: $black;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                a
+                {
+                   
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: $fs14;
+                    line-height: 170%;
+                    text-decoration-line: underline;
+                    color: $black;
+                }
+            }
+
+            .privacy__logo
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+    }
+
+}

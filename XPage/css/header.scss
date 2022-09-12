@@ -1,0 +1,332 @@
+/*FONTS*/
+
+@font-face {
+    font-family: "Frank";
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("Frank"),
+         /* Если не получилось, загрузит ttf */
+         url("../fonts/Frank/Frank-Regular.eot") format("eot"),
+         url("../fonts/Frank/Frank-Regular.ttf") format("ttf"),
+         url("../fonts/Frank/Frank-Regular.woff") format("woff"),
+        
+  }
+
+
+/*FONTS*/
+
+// Переменные цвет
+$red: #9F0023;
+$gray: #F2F2F2;
+$white: #FFFFFF;
+$black: #373334;
+
+// Переменные размеров
+$fs70: 70px;
+$fs24: 24px;
+$fs20: 20px;
+$fs16: 16px;
+$fs14: 14px;
+$fs12: 12px;
+
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: "Frank";
+}
+
+a
+{
+    text-decoration: none;
+}
+
+#root
+{
+    display: flex;
+    flex-direction: column;
+    background-color: $gray;
+}
+
+.header
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+
+    .header-top
+    {
+        display: flex;
+        justify-content: space-between;
+
+        .header-top__create-button
+        {
+            margin-left: 5%;
+
+            .header-top__create-button__button
+            {
+                display: flex;
+                justify-content: center;
+
+                width: 224px;
+                height: 50px;
+                border: 1px solid $red;
+                border-radius: 56px;
+               
+                .button-text
+                {
+                   text-decoration: none;
+                   color: $red;
+                }
+
+            }
+        }
+
+        .header-top__contact
+        {   
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 5%;
+            width: 200px;
+
+            .phone-number
+            {
+                font-weight: 700;
+                font-size: $fs20;
+                line-height: 135%;
+                color: $black;
+            }
+
+        }
+    }
+
+    .header-bottom
+    {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 5px solid $black;
+        width: 90%;
+        margin-left: 5%;
+        .navigation
+        {   
+            margin: 0;
+            padding: 0;
+            border: none;
+
+           
+
+            .list
+            {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 0;
+                margin: 0;
+                
+
+                li 
+                {
+                   
+                    list-style-type: none;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: $fs20;
+                    line-height: 135%;
+                    color: $black;               
+                    white-space: pre;
+                    margin-left: 8%;
+                   
+                    a 
+                    {
+                        color: $black;
+                        width: 200px;
+                        
+                    }
+                }
+
+                #first__item
+                {
+                    margin-left: 0;
+                }
+            }
+
+            .add
+            {
+                display: none;
+            }
+
+           
+        }
+
+        .subscribe
+        {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 60px;
+            border: none;
+            margin-right: 2.5%;
+            .subscribe__text
+            {  
+                margin-right: 8%;
+                white-space: pre;
+                p 
+                {
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 135%;
+                    color: $black;
+                }
+            }
+            
+            .subscribe__networks
+            {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                .networks__item
+                {
+                    margin-left: 15%;
+                }
+            }
+        }
+      
+    }
+
+    @media (max-width: 1024px)
+    { 
+        
+        .header-bottom
+    {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 5px solid $black;
+        width: 90%;
+        margin-left: 5%;
+        .navigation
+        {   
+            margin: 0;
+            padding: 0;
+            border: none;
+            .list 
+            {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 0;
+                margin: 0;
+               
+                li 
+                {
+                   
+                    list-style-type: none;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: $fs16;
+                    line-height: 135%;
+                    color: $black;               
+                    white-space: pre;
+                    margin-left: 3%;
+                   
+                    a 
+                    {
+                        color: $black;
+                        width: 200px;
+                        
+                    }
+                }
+
+                #first__item
+                {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .subscribe
+        {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 60px;
+            border: none;
+            margin-right: 2.5%;
+            .subscribe__text
+            {  
+                margin-right: 8%;
+                white-space: pre;
+                p 
+                {
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: $fs16;
+                    line-height: 135%;
+                    color: $black;
+                }
+            }
+            
+            .subscribe__networks
+            {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                .networks__item
+                {
+                    margin-left: 15%;
+                }
+            }
+        }
+      
+    }
+
+    }
+
+    @media (max-width: 950px)
+    {
+        
+       .header-bottom
+       {
+
+            .navigation
+            {
+                .list
+                {
+                    display: none;
+                }
+
+                .add
+                {
+                    display: block;
+                    margin-top: 5%;
+                    li 
+                    {
+                        list-style-type: none;
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: $fs20;
+                        line-height: 135%;
+                        color: $black;               
+                       
+
+                        &:hover
+                        {
+                            color: #F2F2F2;
+                        }
+
+                        
+                        
+
+                    }
+
+
+                }
+
+            }
+
+       }
+
+    }
+}
